@@ -1,22 +1,16 @@
-
-
-
-
 def myFilter(func, L):
     """
-
     :type lis: object
     """
     temp = L.copy()
-    for a in temp.numirate():
-        if(not func(temp[a])):
+    for i,a in enumerate(temp):
+        if(not func(a)):
             temp.remove(a)
     return temp
 
 
 def myFilterMulti(funcL,L):
     """
-
     :type funcL: object
     """
     temp=L.copy()
@@ -27,7 +21,6 @@ def myFilterMulti(funcL,L):
 
 def myPrime(x):
     """
-
         :type funcL: object
     """
     if x>1:
@@ -40,12 +33,8 @@ def myPrime(x):
 
 def isPalindrome(x):
     """
-
     :type x: object
     """
     return x == x[::-1]
 
-print(myFilter([9,10,16,24, 29, 36,11], myPrime))
-
-
-
+print(myFilter(myPrime,[9,10,16,24, 29, 36,11]))
