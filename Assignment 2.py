@@ -1,10 +1,11 @@
 
+
 def myFilter(L, func):
     """
-
     :type lis: object
     """
     return [n for n in L if not n.func()]
+
 
 
 def myFilter(L,func):
@@ -18,7 +19,6 @@ def myFilter(L,func):
 
 def myFilterMulti(L,funcL):
     """
-
     :type funcL: object
     """
     for f in funcL:
@@ -28,7 +28,6 @@ def myFilterMulti(L,funcL):
 
 def myPrime(x):
     """
-
         :type funcL: object
     """
     if x>1:
@@ -41,7 +40,6 @@ def myPrime(x):
 
 def isPalindrome(x):
     """
-
     :type x: object
     """
     x = str(x)
@@ -61,4 +59,3 @@ def is_anagram(a,b):
 print(myFilter([9,10,16,24, 29, 36,11], myPrime))
 print(myFilterMulti([1,9,10,16,24,55, 131,149,181],[ myPrime,isPalindrome]))
 print(is_anagram('School master', 'The clAssroom'))
-
