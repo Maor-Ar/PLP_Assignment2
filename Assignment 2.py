@@ -2,24 +2,24 @@
 
 def myFilter(L, func):
     """
-    :type lis: object
+    Filter 'L' list values with the boolean function 'func'
+    
+    Parameters: L (list) , func(reference to a function)
+    
+    Output:Return a list with all the values that when inserted as an input
+           to the given function it returns 'True' .
     """
     return [n for n in L if not n.func()]
 
 
 
-def myFilter(L,func):
-    list1=list()
-    for x in L:
-        if func(x) == True:
-            list1.append(x)
-    L=list1
-    return L
-
-
 def myFilterMulti(L,funcL):
     """
-    :type funcL: object
+    Filter 'L' list values with all of the boolean functions in the list 'funcL'.
+
+    Parameters:L (list), funcL (list of references to functions)
+    Output:Returns a list with all the values that when inserted
+           to each function in 'funcL' all of them return 'True' value.
     """
     for f in funcL:
         L= myFilter(L,f)
@@ -28,7 +28,10 @@ def myFilterMulti(L,funcL):
 
 def myPrime(x):
     """
-        :type funcL: object
+    Is the input a prime number.
+
+    Parameters:x(int)
+    Output:Returns boolean value 'True' if 'x' is a prime number ,otherwise returns 'False'.
     """
     if x>1:
         for n in range(2,x//2):
@@ -40,12 +43,22 @@ def myPrime(x):
 
 def isPalindrome(x):
     """
-    :type x: object
+    Is the input a palindrome.
+
+    Parameters:x(int/str)
+    Output:Returns boolean value 'True' if 'x' is a a palindrome ,otherwise returns 'False'.
     """
     x = str(x)
     return x == x[::-1]
 
 def is_anagram(a,b):
+    """
+    Is the input 'a' is an anagram of 'b' and vice versa.
+
+    Parameters:a(str),b(str)
+    Output:Returns boolean value 'True' if all of the characters (not case sensitive)
+           that are present in string 'a' are also present in string 'b' (in the same quantity) ,otherwise returns 'False'.
+    """
     a=a.upper()
     b=b.upper()
     for c in a:
