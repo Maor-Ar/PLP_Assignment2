@@ -9,7 +9,7 @@ def myFilter(L, func):
     Output:Return a list with all the values that when inserted as an input
            to the given function it returns 'True' .
     """
-    return [n for n in L if not n.func()]
+    return [n for n in L if func(n)]
 
 
 
